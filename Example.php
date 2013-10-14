@@ -53,5 +53,5 @@ class Server {
 	}
 }
 
-$game = new Server('localhost', 9999);
+$server = new Server('localhost', 9999);
 ?> 
