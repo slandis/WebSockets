@@ -19,14 +19,14 @@
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-require_once('User.php');
+require_once('WebSocketUser.php');
 
 class WebSocketServer {
-	private $userClass = 'User';
+	private $userClass 	= 'WebSocketUser';
 	private $master;
-	private $sockets                              = array();
-	private $users                                = array();
-	private $events 							  = array();
+	private $sockets = array();
+	private $users = array();
+	private $events = array();
 
 	public function __construct($address, $port) {
 		$this->master = stream_socket_server("tcp://$address:$port", $errno, $errstr, STREAM_SERVER_BIND | STREAM_SERVER_LISTEN);
